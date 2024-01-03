@@ -255,9 +255,9 @@ void GUI::CreateDrawToolBar() const
 	MenuItemImages[ITM_LOAD] = "images\\MyItems\\load.jpg";
 	MenuItemImages[ITM_RESIZE] = "images\\MyItems\\Resize.jpg";
 	MenuItemImages[ITM_EXIT] = "images\\MyItems\\exist.jpg";
-	MenuItemImages[paint] = "images\\MyItems\\11.jpg";
-	MenuItemImages[paint2] = "images\\MyItems\\22.jpg";
-	MenuItemImages[paint3] = "images\\MyItems\\33.jpg";
+	MenuItemImages[paint] = "images\\MyItems\\I.jpg";
+	MenuItemImages[paint2] = "images\\MyItems\\T.jpg";
+	MenuItemImages[paint3] = "images\\MyItems\\I.jpg";
 	//TODO: Prepare images for each menu item and add it to the list
 
 	//Draw menu item one image at a time
