@@ -20,10 +20,10 @@ enum DrawMenuItem //The items of the Draw menu (you should add more items)
 	//Note: Items are ordered here as they appear in menu
 	//If you want to change the menu items order, change the order here
 	ITM_SQUR,		//Square item in menu
-	ITM_CIRC,		//Circle item in menu
+	//ITM_CIRC,		//Circle item in menu
 	ITM_ELLIP,		//Ellipse item in menu
 	ITM_HEXA ,      // Hexa item in menu
-	ITM_TRNG,		// Tra item in menu
+	//ITM_TRNG,		// Tra item in menu
 	ITM_SELECT,		//SELECT item in menu
 	ITM_FRONT,		// bring figure to front
 	ITM_BACK,      // Send figure to back

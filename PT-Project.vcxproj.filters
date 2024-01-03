@@ -151,14 +151,8 @@
     <ClCompile Include="GUI\GUI.cpp">
       <Filter>GUI Classes</Filter>
     </ClCompile>
-    <ClCompile Include="Figures\CCircle.cpp">
-      <Filter>Action Classes\Figures Classes</Filter>
-    </ClCompile>
     <ClCompile Include="Figures\CEllipse.cpp">
       <Filter>Action Classes\Figures Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="Actions\ActionAddCircle.cpp">
-      <Filter>Action Classes\ShapeDrawing</Filter>
     </ClCompile>
     <ClCompile Include="Actions\ActionAddEllipse.cpp">
       <Filter>Action Classes\ShapeDrawing</Filter>
@@ -181,13 +175,7 @@
     <ClCompile Include="Actions\ActionAddHexagon.cpp">
       <Filter>Action Classes\ShapeDrawing</Filter>
     </ClCompile>
-    <ClCompile Include="Actions\ActionAddTriangle.cpp">
-      <Filter>Action Classes\ShapeDrawing</Filter>
-    </ClCompile>
     <ClCompile Include="Figures\CHexagon.cpp">
-      <Filter>Action Classes\Figures Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="Figures\CTriangle.cpp">
       <Filter>Action Classes\Figures Classes</Filter>
     </ClCompile>
     <ClCompile Include="Actions\ActionChngBkGrndClr.cpp">
@@ -310,14 +298,8 @@
     <ClInclude Include="GUI\GUI.h">
       <Filter>GUI Classes</Filter>
     </ClInclude>
-    <ClInclude Include="Figures\CCircle.h">
-      <Filter>Action Classes\Figures Classes</Filter>
-    </ClInclude>
     <ClInclude Include="Figures\CEllipse.h">
       <Filter>Action Classes\Figures Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="Actions\ActionAddCircle.h">
-      <Filter>Action Classes\ShapeDrawing</Filter>
     </ClInclude>
     <ClInclude Include="Actions\ActionAddEllipse.h">
       <Filter>Action Classes\ShapeDrawing</Filter>
@@ -343,13 +325,7 @@
     <ClInclude Include="Actions\ActionAddHexagon.h">
       <Filter>Action Classes\ShapeDrawing</Filter>
     </ClInclude>
-    <ClInclude Include="Actions\ActionAddTriangle.h">
-      <Filter>Action Classes\ShapeDrawing</Filter>
-    </ClInclude>
     <ClInclude Include="Figures\CHexagon.h">
-      <Filter>Action Classes\Figures Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="Figures\CTriangle.h">
       <Filter>Action Classes\Figures Classes</Filter>
     </ClInclude>
     <ClInclude Include="Actions\ActionChngBkGrndClr.h">

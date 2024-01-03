@@ -1,11 +1,9 @@
 #include "ActionLoad.h"
 #include "..\ApplicationManager.h"
 #include "..\GUI\GUI.h"
-#include "..\Figures\CCircle.h"
 #include "..\Figures\CEllipse.h"
 #include "..\Figures\CSquare.h"
 #include "..\Figures\CHexagon.h"
-#include "..\Figures\CTriangle.h"
 #include "..\Figures\CFigure.h"
 
 #include<fstream>
@@ -56,12 +54,8 @@ void ActionLoad::Execute()
 	{
 		cout << figcount;
 		File >> figName;
-		if (figName == "circle")
-		{
-			fig = new CCircle();
-			cout << "circle" << endl;
-		}
-		else if (figName == "Elipse")
+
+		 if (figName == "Elipse")
 		{
 			fig = new CEllipse();
 			cout << "Elipse" << endl;
@@ -69,11 +63,6 @@ void ActionLoad::Execute()
 		else if (figName == "Square") {
 			fig = new CSquare();
 			cout << "Square" << endl;
-		}
-		else if (figName == "Triangle")
-		{
-			fig = new CTriangle();
-			cout << "Triangle" << endl;
 		}
 		else if (figName == "Hexagon") {
 			fig = new CHexagon();

@@ -90,10 +90,8 @@ ActionType GUI::MapInputToActionType() const
 			{
 				
 			case ITM_SQUR: return DRAW_SQUARE;
-			case ITM_CIRC: return DRAW_CIRC;
 			case ITM_ELLIP: return DRAW_ELLIP;
 			case ITM_HEXA: return DRAW_HEXA;
-			case ITM_TRNG: return DRAW_TRA;
 			case ITM_SELECT: return SELECT;
 			case ITM_FRONT: return FRONT;
 			case ITM_BACK: return BACK;
@@ -191,8 +189,8 @@ ActionType GUI::MapInputToActionType() const
 			//If division result is 0 ==> first item is clicked, if 1 ==> 2nd item and so on
 			switch (ClickedItemOrder)
 			{
-			case ITM_HALF: return HALF;
 			case ITM_QUARTER: return QUARTER;
+			case ITM_HALF: return HALF;
 			case ITM_DOUBLE:   return DOUBLE1;
 			case ITM_QUADRUPLE: return QUADRUPLE;
 			case ITM_BACK2:  return BACK2;
@@ -240,26 +238,26 @@ void GUI::CreateDrawToolBar() const
 	//To control the order of these images in the menu, 
 	//reoder them in UI_Info.h ==> enum DrawMenuItem
 	string MenuItemImages[DRAW_ITM_COUNT];
-	MenuItemImages[ITM_SQUR] = "images\\MenuItems\\square.jpg";
-	MenuItemImages[ITM_CIRC] = "images\\MenuItems\\circle.jpg";
-	MenuItemImages[ITM_ELLIP] = "images\\MenuItems\\elsipse.jpg";
-	MenuItemImages[ITM_HEXA] = "images\\MenuItems\\polign.jpg";
-	MenuItemImages[ITM_TRNG] = "images\\MenuItems\\triangle.jpg";
-	MenuItemImages[ITM_SELECT] = "images\\MenuItems\\Menu_Select.jpg";
-	MenuItemImages[ITM_FRONT] = "images\\MenuItems\\Bring_To_Front.jpg";
-	MenuItemImages[ITM_BACK] = "images\\MenuItems\\Send_to_Back.jpg";
-	MenuItemImages[ITM_DELETE] = "images\\MenuItems\\Delete.jpg";
-	MenuItemImages[ITM_BG_COLOR_CHANGE] = "images\\MenuItems\\BGC.jpg";
-	MenuItemImages[ITM_CHNG_DRAW_COLOR] = "images\\MenuItems\\DrawColorIcon.jpg";
-	MenuItemImages[ITM_FILL_COLOR] = "images\\MenuItems\\FillColor.jpg";
-	MenuItemImages[ITM_PLAY] = "images\\MenuItems\\PlayMode.jpg";
-	MenuItemImages[ITM_SAVE] = "images\\MenuItems\\Save.jpg";
-	MenuItemImages[ITM_LOAD] = "images\\MenuItems\\load.jpg";
-	MenuItemImages[ITM_RESIZE] = "images\\MenuItems\\Resize.jpg";
-	MenuItemImages[ITM_EXIT] = "images\\MenuItems\\Menu_Exit.jpg";
-	MenuItemImages[paint] = "images\\MenuItems\\11.jpg";
-	MenuItemImages[paint2] = "images\\MenuItems\\22.jpg";
-	MenuItemImages[paint3] = "images\\MenuItems\\33.jpg";
+	MenuItemImages[ITM_SQUR] = "images\\MyItems\\square.jpg";
+	//MenuItemImages[ITM_CIRC] = "images\\MenuItems\\circle.jpg";
+	MenuItemImages[ITM_ELLIP] = "images\\MyItems\\ellipse.jpg";
+	MenuItemImages[ITM_HEXA] = "images\\MyItems\\Hexa.jpg";
+	//MenuItemImages[ITM_TRNG] = "images\\MenuItems\\triangle.jpg";
+	MenuItemImages[ITM_SELECT] = "images\\MyItems\\select.jpg";
+	MenuItemImages[ITM_FRONT] = "images\\MyItems\\sendfront.jpg";
+	MenuItemImages[ITM_BACK] = "images\\MyItems\\sendback.jpg";
+	MenuItemImages[ITM_DELETE] = "images\\MyItems\\delete.jpg";
+	MenuItemImages[ITM_BG_COLOR_CHANGE] = "images\\MyItems\\BGC.jpg";
+	MenuItemImages[ITM_CHNG_DRAW_COLOR] = "images\\MyItems\\DrawColorIcon.jpg";
+	MenuItemImages[ITM_FILL_COLOR] = "images\\MyItems\\fill.jpg";
+	MenuItemImages[ITM_PLAY] = "images\\MyItems\\PlayMode.jpg";
+	MenuItemImages[ITM_SAVE] = "images\\MyItems\\Save.jpg";
+	MenuItemImages[ITM_LOAD] = "images\\MyItems\\load.jpg";
+	MenuItemImages[ITM_RESIZE] = "images\\MyItems\\Resize.jpg";
+	MenuItemImages[ITM_EXIT] = "images\\MyItems\\exist.jpg";
+	MenuItemImages[paint] = "images\\MyItems\\11.jpg";
+	MenuItemImages[paint2] = "images\\MyItems\\22.jpg";
+	MenuItemImages[paint3] = "images\\MyItems\\33.jpg";
 	//TODO: Prepare images for each menu item and add it to the list
 
 	//Draw menu item one image at a time
@@ -283,11 +281,11 @@ void GUI::CreatePlayToolBar() const
 	ClearToolBarArea();
 	UI.InterfaceMode = MODE_PLAY;
 	string PlayMenuImages[PLAY_ITM_COUNT];
-	PlayMenuImages[PLAY_TYPE] = "images\\MenuItems\\type.jpg";
-	PlayMenuImages[PLAY_FILL] = "images\\MenuItems\\fill.jpg";
-	PlayMenuImages[PLAY_TYPEFILL] = "images\\MenuItems\\typeandfill.jpg";
-	PlayMenuImages[PLAY_RESET] = "images\\MenuItems\\newgame.jpg";
-	PlayMenuImages[PLAY_BACK] = "images\\MenuItems\\back.jpg";
+	PlayMenuImages[PLAY_TYPE] = "images\\MyItems\\play_select.jpg";
+	PlayMenuImages[PLAY_FILL] = "images\\MyItems\\fill.jpg";
+	PlayMenuImages[PLAY_TYPEFILL] = "images\\MyItems\\play_fill_shape.jpg";
+	PlayMenuImages[PLAY_RESET] = "images\\MyItems\\new_game.jpg";
+	PlayMenuImages[PLAY_BACK] = "images\\MyItems\\back.jpg";
 
 	//TODO: Prepare images for each menu item and add it to the list
 	//Draw menu item one image at a time
@@ -331,11 +329,11 @@ void GUI::CreateResizeToolBar() const
 	UI.InterfaceMode = MODE_SIZE;
 
 	string MenuItemImages[SIZE_ITM_COUNT];
-	MenuItemImages[ITM_HALF] = "images\\MenuItems\\Halfx.jpg";
-	MenuItemImages[ITM_QUARTER] = "images\\MenuItems\\QX.jpg";
-	MenuItemImages[ITM_DOUBLE] = "images\\MenuItems\\X2.jpg";
-	MenuItemImages[ITM_QUADRUPLE] = "images\\MenuItems\\X4.jpg";
-	MenuItemImages[ITM_BACK2] = "images\\MenuItems\\back.jpg";
+	MenuItemImages[ITM_QUARTER] = "images\\MyItems\\quarter.jpg";
+	MenuItemImages[ITM_HALF] = "images\\MyItems\\half.jpg";
+	MenuItemImages[ITM_DOUBLE] = "images\\MyItems\\x2.jpg";
+	MenuItemImages[ITM_QUADRUPLE] = "images\\MyItems\\x4.jpg";
+	MenuItemImages[ITM_BACK2] = "images\\MyItems\\back.jpg";
 
 	for (int i = 0; i < SIZE_ITM_COUNT; i++)
 		for (int i = 0; i < SIZE_ITM_COUNT; i++)

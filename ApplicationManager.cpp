@@ -87,21 +87,12 @@ Action* ApplicationManager::CreateAction(ActionType ActType)
 			newAct = new ActionAddSquare(this);
 			
 			break;
-
-		case DRAW_CIRC:
-			newAct = new ActionAddCircle(this);
-
-			break;
 		case DRAW_ELLIP:
 			newAct = new ActionAddEllipse(this);
 
 			break;
 		case DRAW_HEXA:
 			newAct = new ActionAddHexagon(this);
-
-			break;
-		case DRAW_TRA:
-			newAct = new ActionAddTriangle(this);
 
 			break;
 		case CHNG_DRAW_CLR:

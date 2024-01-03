@@ -41,8 +41,8 @@ enum ActionType //The actions supported (you can add more if needed)
 	ACTION_TO_DRAW, //Switch interface to Draw mode
 
 	TO_SIZE,
-	HALF,
 	QUARTER,
+	HALF,
 	DOUBLE1,
 	QUADRUPLE,
 	BACK2,
