@@ -525,30 +525,36 @@ void GUI::DrawTriangle(Point P1, Point P2, Point P3, GfxInfo ElpsGfxInfo, bool s
 
 void GUI::DrawHexagon(Point P1, Point P2, GfxInfo HexGfxInfo, bool selected) const
 {
-	color DrawingClr;
-	if (selected)
-		DrawingClr = UI.HighlightColor; //Figure should be drawn highlighted
-	else
-		DrawingClr = HexGfxInfo.DrawClr;
-
-	pWind->SetPen(DrawingClr, HexGfxInfo.BorderWdth);	//Set Drawing color & width
-
-	drawstyle style;
-	if (HexGfxInfo.isFilled)
-	{
-		style = FILLED;
-		pWind->SetBrush(HexGfxInfo.FillClr);
-	}
-	else
-		style = FRAME;
-
 	int lengthx = abs(P1.x - P2.x);
 	int lengthy = abs(P1.y - P2.y);
+	if ((P1.x - 0.5 * lengthx < 0)||(P1.x + 1.5 * lengthx > UI.width)/*&&(P1.y + 0.5 * lengthy<UI.height-UI.StatusBarHeight)*/) {
 
-	int arrx[6] = { P1.x,P1.x + lengthx, P1.x + 1.5 * lengthx,P1.x + lengthx,P1.x,P1.x - 0.5 * lengthx };
-	int arry[6] = { P1.y,P1.y,P1.y + 0.5 * lengthy,P1.y + lengthy,P1.y + lengthy,P1.y + 0.5 * lengthy };
+		PrintMessage(" The Shape will be out of window!");
+	}
+	else {
+		color DrawingClr;
+		if (selected)
+			DrawingClr = UI.HighlightColor; //Figure should be drawn highlighted
+		else
+			DrawingClr = HexGfxInfo.DrawClr;
 
-	pWind->DrawPolygon(arrx, arry, 6, style);
+		pWind->SetPen(DrawingClr, HexGfxInfo.BorderWdth);	//Set Drawing color & width
+
+		drawstyle style;
+		if (HexGfxInfo.isFilled)
+		{
+			style = FILLED;
+			pWind->SetBrush(HexGfxInfo.FillClr);
+		}
+		else
+			style = FRAME;
+
+		int arrx[6] = { P1.x,P1.x + lengthx, P1.x + 1.5 * lengthx,P1.x + lengthx,P1.x,P1.x - 0.5 * lengthx };
+		int arry[6] = { P1.y,P1.y,P1.y + 0.5 * lengthy,P1.y + lengthy,P1.y + lengthy,P1.y + 0.5 * lengthy };
+
+		pWind->DrawPolygon(arrx, arry, 6, style);
+	}
+
 
 }
 //////////////////////////////////////////////////////////////////////////////////////
