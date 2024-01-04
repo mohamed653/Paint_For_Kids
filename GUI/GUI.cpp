@@ -443,25 +443,32 @@ void GUI::DrawCircle(Point P1, int _radius, GfxInfo RectGfxInfo, bool selected) 
 
 void GUI::DrawSquare(Point P1, int length, GfxInfo RectGfxInfo, bool selected) const
 {
-	color DrawingClr;
-	if(selected)	
-		DrawingClr = UI.HighlightColor; //Figure should be drawn highlighted
-	else			
-		DrawingClr = RectGfxInfo.DrawClr;
-	
-	pWind->SetPen(DrawingClr, RectGfxInfo.BorderWdth);	//Set Drawing color & width
-	
-	drawstyle style;
-	if (RectGfxInfo.isFilled)	
-	{
-		style = FILLED;		
-		pWind->SetBrush(RectGfxInfo.FillClr);
-	}
-	else	
-		style = FRAME;
+	if (P1.y+length < UI.height-UI.StatusBarHeight) {
 
-	
-	pWind->DrawRectangle(P1.x, P1.y, P1.x +length, P1.y+length, style);
+		color DrawingClr;
+		if (selected)
+			DrawingClr = UI.HighlightColor; //Figure should be drawn highlighted
+		else
+			DrawingClr = RectGfxInfo.DrawClr;
+
+		pWind->SetPen(DrawingClr, RectGfxInfo.BorderWdth);	//Set Drawing color & width
+
+		drawstyle style;
+		if (RectGfxInfo.isFilled)
+		{
+			style = FILLED;
+			pWind->SetBrush(RectGfxInfo.FillClr);
+		}
+		else
+			style = FRAME;
+
+
+		pWind->DrawRectangle(P1.x, P1.y, P1.x + length, P1.y + length, style);
+	}
+	else {
+		PrintMessage("The Shape will be out of area");
+	}
+
 }
 
 

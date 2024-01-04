@@ -75,21 +75,23 @@ string CSquare::getShapeType()
 
 void CSquare::Resize(GUI* pGUI, float size) {
 	Point test1 = TopLeftCorner;
+	int newLength = length * size;
 
-	if (test1.y < UI.ToolBarHeight || test1.x > UI.width)
+
+	if (test1.y+ newLength > UI.height || test1.x+ newLength > UI.width)
 	{
 		pGUI->PrintMessage("square size will be more than Drawing Area");
 		Sleep(1000);
 	}
-	else if (((test1.x - length) / 2) < 15 || ((test1.y - length) / 2) < 10)
+	else if (newLength<20)
 	{
-		pGUI->PrintMessage("square size will be very small");
+		pGUI->PrintMessage("square size will be very small"); 
 		Sleep(1000);
 	}
 
-	this->length = this->length * size;
-
-
+	else {
+		this->length = this->length * size;
+	}
 
 }
 

@@ -110,17 +110,19 @@ void CEllipse::Resize(GUI* pGUI, float size) {
 	if (test1.y < UI.ToolBarHeight || test2.y > UI.height - UI.StatusBarHeight
 		|| test2.x > UI.width || test1.x < 1)
 	{
-		pGUI->PrintMessage("Ellips size will be more than Drawing Area");
+		pGUI->PrintMessage("Ellipse size will be more than Drawing Area");
 		Sleep(1000);
 	}
 	else if (((test2.x - test1.x) / 2) < 15 || ((test2.y - test1.y) / 2) < 10)
 	{
-		pGUI->PrintMessage("Ellips size will be very small");
+		pGUI->PrintMessage("Ellipse size will be very small");
 		Sleep(1000);
 	}
+	else {
+		P1 = test1;
+		P2 = test2;
+	}
 
-	P1 = test1;
-	P2 = test2;
 
 }
 
