@@ -525,9 +525,10 @@ void GUI::DrawTriangle(Point P1, Point P2, Point P3, GfxInfo ElpsGfxInfo, bool s
 
 void GUI::DrawHexagon(Point P1, Point P2, GfxInfo HexGfxInfo, bool selected) const
 {
+	int colorBarWidth = 40;
 	int lengthx = abs(P1.x - P2.x);
 	int lengthy = abs(P1.y - P2.y);
-	if ((P1.x - 0.5 * lengthx < 0)||(P1.x + 1.5 * lengthx > UI.width)/*&&(P1.y + 0.5 * lengthy<UI.height-UI.StatusBarHeight)*/) {
+	if ((P1.x - 0.5 * lengthx-colorBarWidth < 0)||(P1.x + 1.5 * lengthx > UI.width)) {
 
 		PrintMessage(" The Shape will be out of window!");
 	}
